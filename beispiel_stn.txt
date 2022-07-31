@@ -1,0 +1,41 @@
+hb9abo/p,Urs,831365,168550,klasse e ist genial,buendner nusstorte
+hb9afh/p,Hugo,756080,195410,sota ist programm,viva el presidente
+hb9afi/p,Kurt,511190,158915,,
+hb9ajm/p,,704950,117160,spaghetti carbonara,pizza prosciutto
+hb9aoo/p,,591320,207110,,
+hb9arl/p,,714750,238080,,
+hb9ayz/p,,748100,252900,,
+hb9bfc/p,Juerg,620710,158810,,
+hb9bgg/p,Marco,706750,246600,flughafenrunden,tragbar leichter
+hb9bhl/p,Fritz,706457,247300,,
+hb9bhu/p,,653204,212299,,
+hb9bqb/p,Guido,693300,221700,,
+hb9bqu/p,,626300,216400,,
+hb9bsh/p,Tom,735225,245360,mikroinduktivitaet,appenzellerwurst
+hb9bvw/p,Franz,632800,210800,,
+hb9bxe/p,Hans-peter,673060,217305,,
+hb9cex/p,Peter,701430,219170,,
+hb9cga/p,Uli,545428,203815,kein gurkensalat,lieber cw als voip
+hb9cmi/p,Peter,713070,251220,,
+hb9dco/p,,751912,250888,,
+hb9deo/p,Robi,700781,226053,ascom handtasten,dank dem grillchef
+hb9dgv/p,,626730,212460,,
+hb9dhh/p,Rene,743175,247725,,
+hb9dlr/p,,592000,228075,,
+hb9doz/p,Martin,719956,096459,kantonschemiker,gaschromatograph
+hb9dqj/p,Markus,632972,202564,,
+hb9drk/p,,627200,246950,,
+hb9dst/p,Paul,706575,108950,i like building rigs,the filter is tuned
+hb9fae/p,,713010,150680,,
+hb9hqx/p,Beat,641300,127700,walliser fendant,lehrerkonferenz
+hb9iab/p,,570900,132250,voici les poulets,le temps est couvert
+hb9ial/p,Alexandre,559800,164500,nous avons le temps,un verre de bon vin
+hb9ik/p,,614050,247762,,
+hb9kt/p,Dave,588100,249500,,
+hb9od/p,,587580,224450,,
+hb9qa/p,Karl,586730,234620,,
+hb9qh/p,,692295,239670,,
+hb9qo/p,Bruno,664625,234050,,
+hb9re/p,Fritz,679450,245040,,
+hb9tso/p,Rolf,692820,239560,,
+hb9uh/p,Hans,684614,292100,,

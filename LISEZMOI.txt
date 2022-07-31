@@ -1,0 +1,185 @@
+TVKLog v1.2
+-----------
+
+TVKLog est un logiciel spécialement créé pour l'enregistrement des liaisons
+durant le contest National Mountain Day (NMD). Il inclut les fonctions 
+suivantes:
+
+- Enregistrement des liaisons, y.c. les textes échangés et l'heure du QSO en UTC
+- Contrôle des doubles, selon règlement du NMD (2e QSO avec les stations NMD 
+  après 0800 UTC
+- Contrôle des 15 signes pour les textes reçus
+- Communications personnalisées (en option)
+- Affichage du prénom du partenaire du QSO (si saisi préalablement)
+- Affichage de la distance entre stations NMD (si coordonnées saisies)
+- Exportation des logs en CSV (pour pouvoir les insérer dans la formule 
+  officielle de décompte)
+- Exportation des logs en ADIF (pour l'importation dans presque tous les 
+  autres programmes de log)
+- worklist: fenêtre séparée listant tous les indicatifs NMD encore à contacter
+
+Installation
+------------
+
+TVKLog n'a pas besoin d'être installé. Il se compose d'un seul fichier .exe qui 
+peut être mis à l'endroit désiré et simplement mis en route (par exemple mis 
+sur une clé USB)
+
+Choix de la langue
+------------------
+
+TVKLog est disponible actuellement en allemand, en anglais et en français. 
+Pour passer en anglais (ou en français) il suffit au démarrage d'appeler le 
+fichier TVKLog-en.exe (ou TVKLog-fr.exe) au lieu de TVKLog.exe.
+
+Préparatifs
+-----------
+
+Avant d'utiliser TVKLog il faut créer deux fichiers texte, soit:
+- Un contenant les informations sur les stations participantes au NMD
+- Un contenant les textes à échanger durant le contest
+
+Format des données sur les stations: chaque station NMD figure sur une ligne, 
+et les différentes données sont séparées par une virgule (,):
+
+indicatif,prénom,coordonnées-X,coordonnées-Y,texte1,texte2
+
+par exemple: 
+hb9aaa/p,Peter,681239,2378065,fluegelschraube,buendner nusstorte
+hb9aab/p,Tom,735225,245360,mikroinduktivitaet,appenzellerwurst
+
+Remarques:
+- majuscules/minuscules ne joue pas de rôle pour l'indicatif
+- le prénom est en option (simplement laisser vide si inconnu ou pas nécessaire)
+- les coordonnées X/Y sont celles de la carte topographique fédérale (en option)
+- les textes sont aussi en option. S'ils sont présents, ils doivent avoir une 
+  longueur de 15 signes (les espaces ne sont pas comptés)
+- Toutes les virgules doivent être présentes, même si des informations sont omises. 
+  Chaque ligne doit donc compter 5 virgules. Exemples:
+
+hb9qh/p,,692295,239670,,
+hb9qo/p,,,,,
+
+Un fichier modèle prêt au téléchargement sera disponible juste avant le NMD,
+comprenant la liste officielle des participants et une carte avec les emplacement. 
+Ce fichier n'a plus qu'à être complété (en option) avec les textes personnels 
+préparés.
+
+IMPORTANT: Les données doivent être saisies comme fichier texte 
+(extension .txt). Le mieux est d'utiliser notepad ou wordpad, ou un autre 
+éditeur de texte. Si on utilise WORD de Microsoft, lors de l'opération
+"enregistrer sous..." ne pas oublier de le faire avec l'extension .txt.
+
+Format: une information par ligne. Durant le contest les textes seront utilisés 
+de haut en bas de la base de données, et ne peuvent être utilisés qu'une seule 
+fois. Exemples:
+
+	funkwetterbericht
+	i hate winding coils
+	spiegelfrequenzen
+	kein gurkensalat
+
+Démarrage et utilisation de TVKLog
+----------------------------------
+
+TVKLog démarre en faisant un double clic sur TVKLog.exe. Il faut d'abord ouvrir 
+une base de données existantes (Data->ouvrir), ou choisir (Data->nouveau), cliquer
+et lui donner un nom, par ex. hb9ial.
+
+Pour une nouvelle base il faut d'abord la description de la station et la liste des 
+textes chargés. On réalise ceci via le menu log -> importer station pour la liste des 
+stations, et log -> importer texte pour la liste des textes. Si la liste manque, une 
+erreur correspondante sera signalée (par ex. textes trop courts, coordonnées inva-
+lides, etc.).
+
+Ensuite il faut introduire les coordonnées géographiques de son propre QTH 
+(Extra->introduire QTH) si on souhaite l'affichage de la distance entre stations NMD.
+
+Saisie des liaisons:
+
+- Ecrire l'indicatif reçu dans le champ "call",et avancer au champ suivant avec TAB
+- TVKLog contrôle l'indicatif et affiche alors diverses informations
+  -- Prénom de l'opérateur (pour les stations NMD enregistrées)
+  -- Nouvelle liaisons (==new==), ou double (==dupe==)
+  -- Distance entre les stations (les coordonnées des stations ont été saisies)
+  -- Texte à transmettre (pour une station NMD) ou "no NMD"
+- Introduire les autres données de la liaison (RST envoyé/reçu, texte de la 
+  contre-station)
+- La touche TAB permet d'avancer et shift-TAB permet de reculer
+- Le texte de la contre-station s'affiche en rouge, et passe en noir dès que 
+  les 15 signes sont atteints. Les textes trop courts peuvent néanmoins être stockés.
+- Lorsque les données sont complètes, la saisie peut être mémorisée avec ENTER
+- La touche ESC permet d'effacer une saisie 
+
+Compteur de QSO: A droite sous le champ du texte on voit l'état actuel des liaisons 
+réparties en NMD, HB et DX.
+
+Fonctions spéciales
+-------------------
+
+- Normalement, à partir de 0800 UTC, TVKLog commute automatiquement de la première 
+  à la deuxième moitié du contest. Cela permet une 2e liaison pour chaque station NMD
+  déjà enregistrée. Le 2e texte préparé pour une station apparaît aussi à ce moment. 
+  Afin de pouvoir essayer cela à l'avance on peut forcer dans le menu "extra->première
+  moitié", respectivement "extra->deuxième moitié". TVKLog se comporte alors commesi on 
+  se trouvait vraiment dans la première ou dans la deuxième moitié du contest. Avec 
+  "extra->moitiés automatiques" on retourne à l'état automatique.
+- Worklist: Avec "extra->afficher la worklist" on peut ouvrir la fenêtre additionnelle
+  pour voir la liste des stations NMD encore manquantes (moitié actuelle du contest)
+- Zeiteingabe: Le champ de saisie UTC peut être activé et des QSO peuvent être saisis 
+  (heure UTC incluse). Cette fonction s'utilise pour saisir ultérieurement des liai-
+  sons récupérées.
+
+Après le contest
+----------------
+
+- Après le contest le log peut être enregistré comme fichier CSV, ou fichier ADIF
+  (Sous Data log->exporter CSV, respectivement log->exporter ADIF
+- Le format ADIF peut être lu pratiquement par tous les programmes de log
+
+
+Bien du plaisir avec TVKLog et GL pour le contest, c'est ce que vous souhaite
+
+Peter Kohler / HB9TVK
+
+
+
+
+
+
+Historique de la version
+------------------------
+
+2008-10-05	TVKLog v1.1
+-		Nommé TVKLog au lieu de NMDLog pour éviter la confusion avec un homo-
+		nyme sous Excel
+-		Amélioraton du texte d'aide
+-		Plurilingue, allemand, anglais et français disponibles, autres lan-
+		gues envisageables par simple traduction d'un fichier données
+- 		Avec OUVRIR un log NMD, le logiciel tient compte des listes établies
+		et les utilise pour d'autres opérations import/export
+- 		Mise en mémoire du log avec ENTER, au lieu de Shift+ENTER
+-		La fenêtre "about" peut être fermée avec ESC
+- 		Nouveau mode "Zeiteingabe" pour postérieurs de QSO's (l'heure UTC
+		peut aussi être ajoutée)
+_		Police: Log est maintenant écrit avec la police Courrier à espaces
+		fixes, commençant à gauche
+-		Réduction de la possibilité d'introduction du RST à 3 chiffres com-
+ 		pris entre 1-9
+-		L'heure d'enreggistrement est prise au moment où le champ indicatif 
+		est complété, au lieu de l'être après ENTER
+-		Bugfix: Sont encore seules reconnues comme stations NMD les HB9*/p,
+		HB3*/p ou HE*/p (auparavant aussi les étrangères avec /p)
+-		Bugfix: Coordonnées introduites (QTH); auparavant, malgré une 
+		erreur décelée, oles coordonnées erronées étaient enregistrées
+
+2008-09-20	NMDLog v1.0 - publication de la première version
+
+Prévu:
+- Edition postérieures des données du log
+- Editeur intégré pour la liste des stations et les textes à transmettre
+
+
+
+
+
